@@ -1,9 +1,9 @@
 
 <?php
-	$server = "localhost";
-	$username = "Chef";
-	$password = "MiCocina!";
-	$database = "puchero_relacional";
+	$server = "[IP or localhost]";
+	$username = "[user]";
+	$password = "[password]";
+	$database = "[databasename]";
 
 	// Establecer estilo de error para que use excepciones
 	mysqli_report(MYSQLI_REPORT_STRICT | MYSQLI_REPORT_ERROR);
