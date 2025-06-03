@@ -26,6 +26,7 @@ Establece el modo de reporte de errores de mysqli:
 - **MYSQLI_REPORT_ERROR**: informa solo de errores graves, omitiendo avisos molestos como «No index used»
 
 <br>
+
 > [!TIP]
 > Así, puedes controlar exactamente qué mensaje se muestra cuando hay una SQLi, por ejemplo.
 
