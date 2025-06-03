@@ -3,8 +3,7 @@
 ## Este script:
 
 - Modificado del curso de introducción al hacking de H4ck4u que soluciona el problema del error-based SQLI
-- Reproduce fielmente un escenario vulnerable a SQLi basada en errores.
-- Muestra solo el mensaje SQL relevante, ocultando la traza interna del servidor.
+- Muestra solo el mensaje SQL relevante, ocultando la traza interna del servidor
 
 ```php
 $server = "localhost";
