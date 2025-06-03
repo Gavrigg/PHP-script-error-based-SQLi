@@ -14,8 +14,8 @@ $database = "puchero_relacional";
 ```
 Define las credenciales necesarias para conectarse a tu base de datos MariaDB/MySQL:
 - localhost: el servidor donde está la base de datos (en este caso, la misma máquina).
-- "[User]" y "[Password]": usuario y contraseña para autenticarse.
-- "[database name]": nombre de la base de datos.
+- **"[User]"** y **"[Password]"**: usuario y contraseña para autenticarse.
+- **"[database name]"**: nombre de la base de datos.
 
 ___
 
@@ -23,8 +23,8 @@ ___
 mysqli_report(MYSQLI_REPORT_STRICT | MYSQLI_REPORT_ERROR);
 ```
 Establece el modo de reporte de errores de mysqli:
-- MYSQLI_REPORT_STRICT: transforma los errores en excepciones mysqli_sql_exception, que puedes capturar con try-catch
-- MYSQLI_REPORT_ERROR: informa solo de errores graves, omitiendo avisos molestos como «No index used»
+- **MYSQLI_REPORT_STRICT**: transforma los errores en excepciones mysqli_sql_exception, que puedes capturar con try-catch
+- **MYSQLI_REPORT_ERROR**: informa solo de errores graves, omitiendo avisos molestos como «No index used»
 
 Así, puedes controlar exactamente qué mensaje se muestra cuando hay una SQLi, por ejemplo.
 
@@ -54,7 +54,7 @@ ___
 ```php
 $query = "SELECT username FROM users WHERE id = '$id'";
 ```
-Crea la consulta SQL, insertando el valor de $id sin escapar ni sanitizar, lo que la hace vulnerable a inyección SQL.
+Crea la consulta **SQL**, insertando el valor de $id sin escapar ni sanitizar, lo que la hace vulnerable a inyección SQL.
 
 ___
 
@@ -63,8 +63,7 @@ $data = $conn->query($query);
 $response = $data->fetch_assoc();
 ```
 - Ejecuta la consulta
-- Extrae el resultado como un array asociativo (['username' => 'loquesea'])
-
+- Extrae el resultado como un array asociativo **(['username' => 'loquesea'])**
 ___
 
 ```php
@@ -79,6 +78,6 @@ ___
     echo $e->getMessage();
 }
 ```
-Si ocurre un error SQL (por ejemplo, por una inyección malformada), captura la excepción y muestra únicamente el mensaje de SQL. Así evitas que PHP muestre un stack trace completo, y simulas el comportamiento deseado para ataques SQLi basados en error.
+Si ocurre un **error SQL** (por ejemplo, por una inyección malformada), captura la excepción y muestra únicamente el mensaje de SQL. Así **evitas que PHP muestre un stack trace completo**, y simulas el comportamiento deseado para ataques SQLi basados en error.
 
 
