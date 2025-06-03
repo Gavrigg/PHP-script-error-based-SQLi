@@ -48,7 +48,7 @@ Por ejemplo:
 http://localhost/SearchUsers.php?id=1
 guardará '1' en la variable $id.
 
-Esto es inseguro si no hay validación: alguien puede pasar algo como: id=1' OR 1=1-- y alterar la consulta
+Esto es inseguro si no hay validación. Alguien podría pasar algo como: id=1' OR 1=1-- y alterar la consulta
 
 ___
 
