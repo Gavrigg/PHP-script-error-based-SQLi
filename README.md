@@ -7,9 +7,9 @@
 
 ```php
 $server = "localhost";
-$username = "Chef";
-$password = "MiCocina!";
-$database = "puchero_relacional";
+$username = "User";
+$password = "Password";
+$database = "database_name";
 ```
 Define las credenciales necesarias para conectarse a tu base de datos MariaDB/MySQL:
 - **"localhost"**: el servidor donde está la base de datos (en este caso, la misma máquina).
