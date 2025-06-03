@@ -26,7 +26,8 @@ Establece el modo de reporte de errores de mysqli:
 - **MYSQLI_REPORT_STRICT**: transforma los errores en excepciones mysqli_sql_exception, que puedes capturar con try-catch
 - **MYSQLI_REPORT_ERROR**: informa solo de errores graves, omitiendo avisos molestos como «No index used»
 
-Así, puedes controlar exactamente qué mensaje se muestra cuando hay una SQLi, por ejemplo.
+> [!TIP]
+> Así, puedes controlar exactamente qué mensaje se muestra cuando hay una SQLi, por ejemplo.
 
 ___
 
@@ -46,9 +47,7 @@ Por ejemplo:
 http://localhost/SearchUsers.php?id=1
 guardará '1' en la variable $id.
 
-> [!WARNING]
-> Esto es inseguro si no hay validación: alguien puede pasar algo como:
-> id=1' OR 1=1-- y alterar la consulta
+Esto es inseguro si no hay validación: alguien puede pasar algo como: id=1' OR 1=1-- y alterar la consulta
 
 ___
 
